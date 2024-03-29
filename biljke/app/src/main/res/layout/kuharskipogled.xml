@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/slikaItem"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/nazivItem"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/profilOkusaItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/slikaItem"
+            app:layout_constraintTop_toTopOf="@+id/slikaItem" />
+
+        <TextView
+            android:id="@+id/profilOkusaItem"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/jelo2Item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/slikaItem"
+            app:layout_constraintTop_toBottomOf="@+id/nazivItem" />
+
+        <TextView
+            android:id="@+id/jelo1Item"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/slikaItem"
+            app:layout_constraintEnd_toStartOf="@+id/jelo2Item"
+            app:layout_constraintStart_toEndOf="@+id/slikaItem"
+            app:layout_constraintTop_toBottomOf="@+id/profilOkusaItem" />
+
+        <TextView
+            android:id="@+id/jelo2Item"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/slikaItem"
+            app:layout_constraintEnd_toStartOf="@+id/jelo3Item"
+            app:layout_constraintStart_toEndOf="@+id/jelo1Item"
+            app:layout_constraintTop_toBottomOf="@+id/profilOkusaItem" />
+
+        <TextView
+            android:id="@+id/jelo3Item"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/slikaItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/jelo2Item"
+            app:layout_constraintTop_toBottomOf="@+id/profilOkusaItem" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
