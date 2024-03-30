@@ -8,8 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class BotanickiAdapter (
-    private var biljke: List<Biljka>
+class BotanickiAdapter(
+    var biljke: List<Biljka>,
+    private val onClickListener: (Biljka) -> Unit
+
 ) : RecyclerView.Adapter<BotanickiAdapter.BiljkaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BiljkaViewHolder {
@@ -48,13 +50,27 @@ class BotanickiAdapter (
         if (id==0) id=context.resources
             .getIdentifier("picture1", "drawable", context.packageName)
         holder.slika.setImageResource(id)
-
+        holder.itemView.setOnClickListener {
+            val clickedBiljka = biljke[position]
+            onClickListener(clickedBiljka)
+            filter(clickedBiljka)
+        }
     }
 
     fun updateBiljke(biljke: List<Biljka>) {
         this.biljke = biljke
         notifyDataSetChanged()
     }
+
+    fun filter(referentnaBiljka: Biljka) {
+        val filteredList = biljke.filter { biljka ->
+            biljka.porodica == referentnaBiljka.porodica &&
+                    biljka.klimatskiTipovi.any { referentnaBiljka.klimatskiTipovi.contains(it) } &&
+                    biljka.zemljisniTipovi.any { referentnaBiljka.zemljisniTipovi.contains(it) }
+        }
+        updateBiljke(filteredList)
+    }
+
 
 
     inner class BiljkaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

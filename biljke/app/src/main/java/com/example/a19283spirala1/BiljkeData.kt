@@ -57,7 +57,7 @@ val biljke = listOf(
         medicinskoUpozorenje = "Timijan je obično siguran za upotrebu, ali treba izbjegavati velike količine tokom trudnoće.",
         medicinskeKoristi = listOf(MedicinskaKorist.REGULACIJAPROBAVE),
         profilOkusa = ProfilOkusaBiljke.GORKO,
-        jela = listOf("Odličan za začinjavanje raznih jela"),
+        jela = listOf("krompir","Riža", "Pizza"),
         klimatskiTipovi = listOf(KlimatskiTip.SREDOZEMNA, KlimatskiTip.UMJERENA),
         zemljisniTipovi = listOf(Zemljiste.PJESKOVITO, Zemljiste.ILOVACA)
     ), Biljka(
@@ -66,7 +66,7 @@ val biljke = listOf(
         medicinskoUpozorenje = "Upotreba u medicinske svrhe mora biti pod strogim liječničkim nadzorom.",
         medicinskeKoristi = listOf(MedicinskaKorist.SMIRENJE, MedicinskaKorist.PROTUUPALNO),
         profilOkusa = ProfilOkusaBiljke.BEZUKUSNO,
-        jela = listOf(),
+        jela = listOf("Kolačići"),
         klimatskiTipovi = listOf(KlimatskiTip.SREDOZEMNA, KlimatskiTip.TROPSKA, KlimatskiTip.SUBTROPSKA),
         zemljisniTipovi = listOf(Zemljiste.PJESKOVITO, Zemljiste.CRNICA)
     ), Biljka(
@@ -84,7 +84,7 @@ val biljke = listOf(
         medicinskoUpozorenje = "Nije preporucljivo za konzumiranje",
         medicinskeKoristi = listOf(MedicinskaKorist.SMIRENJE,MedicinskaKorist.PODRSKAIMUNITETU,MedicinskaKorist.PROTIVBOLOVA),
         profilOkusa = ProfilOkusaBiljke.GORKO,
-        jela = listOf("Korisno za obloge"),
+        jela = listOf("obloge"),
         klimatskiTipovi = listOf(KlimatskiTip.SUHA),
         zemljisniTipovi = listOf(Zemljiste.ILOVACA)
     ), Biljka(
@@ -93,7 +93,7 @@ val biljke = listOf(
         medicinskoUpozorenje = " Majčina dušica je sigurna za upotrebu",
         medicinskeKoristi = listOf(MedicinskaKorist.PODRSKAIMUNITETU,MedicinskaKorist.SMIRENJE),
         profilOkusa = ProfilOkusaBiljke.GORKO,
-        jela = listOf("Caj"),
+        jela = listOf("čaj","Umak", "Supa"),
         klimatskiTipovi = listOf(KlimatskiTip.SREDOZEMNA, KlimatskiTip.UMJERENA),
         zemljisniTipovi = listOf(Zemljiste.PJESKOVITO)
     )
@@ -102,4 +102,8 @@ val biljke = listOf(
 
 fun dajBiljke() : List<Biljka> {
     return biljke;
+}
+
+fun dajBiljkeSize() : Int {
+    return biljke.size
 }
